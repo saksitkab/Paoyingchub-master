@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.parkt_000.paoyingchub.game"
+    android:id="@+id/bggame"
+    android:background="@drawable/backgroundphoto">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/en1"
+        android:layout_marginTop="94dp"
+        android:src="@drawable/enemies1resize"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/en2"
+        android:src="@drawable/enemies1resize"
+        android:layout_alignTop="@+id/en1"
+        android:layout_toEndOf="@+id/en1" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/en3"
+        android:src="@drawable/enemies1resize"
+        android:layout_alignTop="@+id/en2"
+        android:layout_toEndOf="@+id/en2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/round"
+        android:layout_above="@+id/en2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paper1"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/paperv1ja1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:onClick="buttonClicked" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rock1"
+        android:src="@drawable/rockv1ja1"
+        android:layout_alignTop="@+id/paper1"
+        android:layout_toEndOf="@+id/paper1"
+        android:onClick="buttonClicked"
+        android:clickable="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sccissor1"
+        android:src="@drawable/sccissorja1"
+        android:layout_alignBottom="@+id/rock1"
+        android:layout_alignParentEnd="true"
+        android:onClick="buttonClicked"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/sname"
+        android:layout_below="@+id/rock1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/next"
+        android:layout_alignParentBottom="true"
+        android:onClick="buttonClicked2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:id="@+id/restart"
+        android:layout_alignTop="@+id/next"
+        android:layout_alignEnd="@+id/sccissor1"
+        android:onClick="buttonClicked2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Over"
+        android:id="@+id/over"
+        android:layout_below="@+id/en1"
+        android:layout_toStartOf="@+id/restart"
+        android:onClick="buttonClicked2" />
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.parkt_000.paoyingchub.register"
+    android:background="#ff67ff8d"
+    android:id="@+id/bgregister">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Register"
+        android:id="@+id/Register_text"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="UserName :  "
+        android:id="@+id/idforget_text"
+        android:layout_below="@+id/Register_text"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Password :  "
+        android:id="@+id/pass_text"
+        android:layout_below="@+id/idforget_text"
+        android:layout_alignEnd="@+id/idforget_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SecretPass :  "
+        android:id="@+id/secret_text"
+        android:layout_below="@+id/pass_text"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_box"
+        android:layout_alignBottom="@+id/idforget_text"
+        android:layout_alignEnd="@+id/Register_text"
+        android:layout_toEndOf="@+id/idforget_text"
+        android:background="#ffffeae5"
+        android:layout_toStartOf="@+id/secret_text" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password_box"
+        android:background="#ffffeae5"
+        android:layout_above="@+id/avatar_group"
+        android:layout_toEndOf="@+id/pass_text" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/secret_box"
+        android:background="#ffffeae5"
+        android:layout_above="@+id/secret_text"
+        android:layout_alignStart="@+id/id_box" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:id="@+id/confirm_bot"
+        android:background="#ffff001a"
+        android:onClick="ClickRegister"
+        android:layout_alignBottom="@+id/avatar_group"
+        android:layout_alignStart="@+id/password_box" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/avatar_group"
+        android:layout_below="@+id/secret_text"
+        android:layout_alignEnd="@+id/secret_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Select Your Avatar"
+            android:id="@+id/avatar_text"
+            android:layout_above="@+id/Register_text"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:text="pig"
+            android:id="@+id/pig"
+            android:checked="false"
+            android:layout_below="@+id/secret_text"
+            android:layout_alignEnd="@+id/secret_box"
+            android:background="#ff6476ff" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Chicken"
+            android:id="@+id/chicken"
+            android:checked="false"
+            android:layout_below="@+id/pig_avatar"
+            android:layout_toEndOf="@+id/secret_text"
+            android:background="#ffffd70c" />
+
+        <RadioButton
+            android:layout_width="83dp"
+            android:layout_height="50dp"
+            android:text="Cow"
+            android:id="@+id/cow"
+            android:checked="false"
+            android:layout_below="@+id/chicken_avatar"
+            android:layout_alignParentStart="true"
+            android:background="#ffff1dba" />
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pigimage"
+        android:src="@drawable/pig"
+        android:layout_below="@+id/password_box"
+        android:layout_toEndOf="@+id/id_box" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chickenimage"
+        android:src="@drawable/chickenja"
+        android:layout_above="@+id/confirm_bot"
+        android:layout_toEndOf="@+id/confirm_bot"
+        android:layout_alignStart="@+id/pigimage" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/cow"
+        android:layout_alignEnd="@+id/password_box"
+        android:layout_below="@+id/chickenimage"
+        android:layout_toEndOf="@+id/confirm_bot" />
+
+</RelativeLayout>

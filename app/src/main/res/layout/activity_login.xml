@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.parkt_000.paoyingchub.login"
+    android:background="#ff67ff8d"
+    android:id="@+id/BGlogin">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/applogo"
+        android:layout_marginTop="46dp"
+        android:contentDescription="@string/logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/login_bot"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignEnd="@+id/regis_bot"
+        android:layout_alignStart="@+id/regis_bot"
+        android:background="#ff6a89ff"
+        android:onClick="buttonClickedloginpage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/regis_bot"
+        android:background="#ff3738ff"
+        android:layout_below="@+id/login_bot"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginTop="35dp"
+        android:layout_alignEnd="@+id/imageView2"
+        android:onClick="buttonClickedloginpage" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_text"
+        android:background="#fffbf8ff"
+        android:textColor="#ff010101"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/login_bot"
+        android:layout_alignStart="@+id/login_bot"
+        android:layout_alignEnd="@+id/login_bot"
+        android:layout_alignBottom="@+id/login_bot"
+        android:textSize="32dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/pass_text"
+        android:password="true"
+        android:background="#fffbf8ff"
+        android:textColor="#ff010101"
+        android:visibility="invisible"
+        android:textSize="32dp"
+        android:layout_alignBottom="@+id/regis_bot"
+        android:layout_alignEnd="@+id/regis_bot"
+        android:layout_alignStart="@+id/regis_bot" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:id="@+id/confirm_bot"
+        android:background="#ffff0e1a"
+        android:visibility="invisible"
+        android:onClick="buttonClickedloginpage"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/regis_bot"
+        android:layout_toStartOf="@+id/forget_bot" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="forget password"
+        android:id="@+id/forget_bot"
+        android:onClick="buttonClickedloginpage"
+        android:background="#ffd9ff00"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/regis_bot" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="offline version"
+        android:id="@+id/guest_bot"
+        android:background="#ffff0009"
+        android:clickable="true"
+        android:onClick="buttonClickedloginpage"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/confirm_bot"
+        android:layout_toStartOf="@+id/forget_bot" />
+
+</RelativeLayout>
